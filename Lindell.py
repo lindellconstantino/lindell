@@ -1,49 +1,26 @@
-from user_functions import register_user, edit_user
+def calculate_square(num):
+    return num ** 2
 
-user = ' '
-user email ' '
+def is_even(num):
+    return num % 5 == 0
 
-while True:
+def display_message(condition):
+    if condition:
+        print("The condition is True.")
+    else:
+        print("The condition is False.")
 
-	user_input = input('''
-1.) show user
-2.) create user 
-3.) clear user
-4.) edit user
-0.) exit
+def main():
+    number = 16
+    squared_number = calculate_square(number)
+    print(f"The square of {number} is: {squared_number}")
 
-what do you think to do?: ''')
+    if is_even(number):
+        print(f"{number} is an even number.")
+    else:
+        print(f"{number} is an odd number.")
 
-   if user_input == '1':
+    display_message(True)
 
-   	if user != '':
-   		print(f'\n{user} - {user_email}')
-   	else:
-   	    print('\nNo user found')	
-
-   elif user_input == '2':
-
-       new_user = register_user()
-       user = new_user['user_name']
-       user_email = new_user['email']
-     
-       print(f'\nNew User Created| Welcome { new_user ["user_name "]}')
-
-    elif user_input == '3':
-
-   	user = ' '
-   	user_ email = ' '
-
-    elif user_input == '4':
-
-       edited_user = edit_user(user) 
- 
-       user = edited_user = edit_user['user_name']
-
-       user = editted_user ['user_name']
-       user_email = editted_user ['email']
-
-   else:
-   	   break 
-
-
+if __name__ == "__main__":
+    main()
